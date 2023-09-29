@@ -6,7 +6,7 @@
 #    By: eviscont <eviscont@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/14 16:41:04 by eviscont          #+#    #+#              #
-#    Updated: 2023/09/25 13:21:02 by eviscont         ###   ########.fr        #
+#    Updated: 2023/09/29 15:32:08 by eviscont         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,6 +37,16 @@ SRCS		= ft_memset.c \
 			ft_calloc.c \
 			ft_strdup.c \
 			ft_substr.c \
+			ft_strjoin.c \
+			ft_strtrim.c \
+			ft_itoa.c \
+			ft_strmapi.c \
+			ft_striteri.c \
+			ft_putchar_fd.c \
+			ft_putstr_fd.c \
+			ft_putendl_fd.c \
+			ft_putnbr_fd.c \
+			ft_split.c \
 				
 OBJS		= $(SRCS:%.c=%.o)
 
