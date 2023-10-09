@@ -6,7 +6,7 @@
 /*   By: eviscont <eviscont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 14:59:50 by eviscont          #+#    #+#             */
-/*   Updated: 2023/09/14 16:53:08 by eviscont         ###   ########.fr       */
+/*   Updated: 2023/10/09 14:52:00 by eviscont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,16 @@ int	ft_isdigit(int c)
 		return (0);
 }
 
-// int main(void)
+// int	main(void)
 // {
-// 	char c;
+// 	char	c;
+
 // 	c = '8';
 // 	if (ft_isdigit(c))
 // 	{
 // 		printf("%c es un caracter numerico\n", c);
 // 	}
-// 	else 
+// 	else
 // 	{
 // 		printf("%c no es un caracter numerico\n", c);
 // 	}

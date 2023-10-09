@@ -6,7 +6,7 @@
 /*   By: eviscont <eviscont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 17:13:57 by eviscont          #+#    #+#             */
-/*   Updated: 2023/09/29 13:18:03 by eviscont         ###   ########.fr       */
+/*   Updated: 2023/10/05 16:06:36 by eviscont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ Los números negativos tienen que gestionarse.*/
 
 #include "libft.h"
 
-int	numblen(long n)
+static int	numblen(long n)
 {
 	int	i;
 

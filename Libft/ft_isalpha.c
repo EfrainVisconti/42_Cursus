@@ -6,7 +6,7 @@
 /*   By: eviscont <eviscont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 12:38:39 by eviscont          #+#    #+#             */
-/*   Updated: 2023/09/14 16:52:03 by eviscont         ###   ########.fr       */
+/*   Updated: 2023/10/09 14:52:14 by eviscont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ int	ft_isalpha(int c)
 		return (0);
 }
 
-// int main(void)
+// int	main(void)
 // {
-// 	char c;
-// 	c = ' ';
+// 	char	c;
 
+// 	c = ' ';
 // 	if (ft_isalpha(c))
 // 	{
 // 		printf("%c es una letra\n", c);
@@ -33,6 +33,5 @@ int	ft_isalpha(int c)
 // 	{
 // 		printf("%c no es una letra\n", c);
 // 	}
-
 // 	return (0);
 // }

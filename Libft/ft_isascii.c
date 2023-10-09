@@ -6,7 +6,7 @@
 /*   By: eviscont <eviscont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 17:37:24 by eviscont          #+#    #+#             */
-/*   Updated: 2023/09/15 18:43:51 by eviscont         ###   ########.fr       */
+/*   Updated: 2023/10/09 14:50:49 by eviscont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ int	ft_isascii(int c)
 // int	main(void)
 // {
 // 	char	c;
-// 	c = 15;	
+
+// 	c = 52;
 // 	if (ft_isascii(c))
 // 	{
 // 		printf("%c es caracter ascii\n", c);

@@ -6,7 +6,7 @@
 /*   By: eviscont <eviscont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 09:41:06 by eviscont          #+#    #+#             */
-/*   Updated: 2023/09/19 11:13:15 by eviscont         ###   ########.fr       */
+/*   Updated: 2023/10/09 16:28:33 by eviscont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ int	ft_toupper(int c)
 // {
 // 	int	c;
 // 	int d;
-	
 // 	c = 120;
 // 	d = ft_toupper(c);
 // 	printf("Antes: %d ", c);

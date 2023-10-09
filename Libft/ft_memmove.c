@@ -6,7 +6,7 @@
 /*   By: eviscont <eviscont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 14:46:16 by eviscont          #+#    #+#             */
-/*   Updated: 2023/09/15 19:12:09 by eviscont         ###   ########.fr       */
+/*   Updated: 2023/10/09 15:36:44 by eviscont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	if (src < dst)
 	{	
 		i = len;
-		
 		while (i-- > 0)
 		{
 			dest[i] = org[i];
@@ -40,8 +39,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 // {
 // 	char	origen[] = "Hola, mundo!";
 // 	char	destino[20];
-// 	ft_memmove(destino, origen, 5);
-// 	destino[5] = '\0';
+// 	ft_memmove(destino, origen, 10);
+// 	destino[4] = '\0';
 // 	printf("Destino: %s\n", destino);
 // 	return (0);
 // }

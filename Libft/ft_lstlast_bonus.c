@@ -1,40 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eviscont <eviscont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/11 15:37:03 by eviscont          #+#    #+#             */
-/*   Updated: 2023/10/09 14:52:37 by eviscont         ###   ########.fr       */
+/*   Created: 2023/10/05 15:44:18 by eviscont          #+#    #+#             */
+/*   Updated: 2023/10/05 17:04:06 by eviscont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+t_list	*ft_lstlast(t_list *lst)
 {
-	if ((c >= '0' && c <= '9') || (c >= 'a' && c <= 'z')
-		|| (c >= 'A' && c <= 'Z'))
+	if (lst == NULL)
+		return (NULL);
+	while (lst->next != NULL)
 	{
-		return (1);
+		lst = lst->next;
 	}
-	else
-		return (0);
+	return (lst);
 }
-
-// int	main(void)
-// {
-// 	char	c;
-
-// 	c = '?';
-// 	if (ft_isalnum(c))
-// 	{
-// 		printf("%c es un alfanumerico", c);
-// 	}
-// 	else
-// 	{
-// 		printf("%c no es un alfanumerico", c);
-// 	}
-// 	return (0);
-// }

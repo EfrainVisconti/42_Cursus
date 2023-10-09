@@ -6,7 +6,7 @@
 /*   By: eviscont <eviscont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 18:42:19 by eviscont          #+#    #+#             */
-/*   Updated: 2023/09/23 14:28:12 by eviscont         ###   ########.fr       */
+/*   Updated: 2023/10/09 16:09:54 by eviscont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 // 	char	src[] = "hola mundo";
 // 	char	dest[] = "prueba de cadena";
 // 	printf("antes: %s, %s\n", src, dest);
-// 	ft_strlcpy(dest, src, 7);
+// 	ft_strlcpy(dest, src, 5);
 // 	printf("despues: %s, %s\n", src, dest);
 // 	printf("tamaño: %zu", ft_strlcpy(dest, src, 7));
 // 	return (0);

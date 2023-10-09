@@ -6,7 +6,7 @@
 /*   By: eviscont <eviscont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 12:57:14 by eviscont          #+#    #+#             */
-/*   Updated: 2023/09/14 18:27:07 by eviscont         ###   ########.fr       */
+/*   Updated: 2023/10/09 15:06:55 by eviscont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ void	*ft_memset(void *b, int c, size_t len)
 // int main()
 // {
 //     char str[50] = "Veneco";
-//     printf("\nBefore memset(): %s\n", str);
-// 	ft_memset(str , 'a', 3);
+//     printf("Before memset(): %s\n", str);
+// 	ft_memset(str, 'a', 3);
 //     printf("After memset():  %s", str);
 //     return 0;
 // }

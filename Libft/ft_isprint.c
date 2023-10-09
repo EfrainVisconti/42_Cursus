@@ -6,7 +6,7 @@
 /*   By: eviscont <eviscont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 18:10:27 by eviscont          #+#    #+#             */
-/*   Updated: 2023/09/14 16:53:51 by eviscont         ###   ########.fr       */
+/*   Updated: 2023/10/09 14:56:30 by eviscont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,16 @@ int	ft_isprint(int c)
 		return (0);
 }
 
-// int main(void)
+// int	main(void)
 // {
-// 	char c;
-// 	c = 155;
+// 	char	c;
+
+// 	c = 120;
 // 	if (ft_isprint(c))
 // 	{
 // 		printf("%c es un caracter imprimible\n", c);
 // 	}
-// 	else 
+// 	else
 // 	{
 // 		printf("%c no es un caracter imprimible\n", c);
 // 	}

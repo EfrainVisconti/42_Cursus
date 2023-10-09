@@ -6,10 +6,9 @@
 #    By: eviscont <eviscont@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/14 16:41:04 by eviscont          #+#    #+#              #
-#    Updated: 2023/09/29 15:32:08 by eviscont         ###   ########.fr        #
+#    Updated: 2023/10/09 13:07:06 by eviscont         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
 
 NAME		= libft.a
 
@@ -50,18 +49,36 @@ SRCS		= ft_memset.c \
 				
 OBJS		= $(SRCS:%.c=%.o)
 
+SRCS_BONUS	= ft_lstnew_bonus.c \
+			ft_lstsize_bonus.c \
+			ft_lstadd_front_bonus.c \
+			ft_lstlast_bonus.c \
+			ft_lstadd_back_bonus.c \
+			ft_lstdelone_bonus.c \
+			ft_lstclear_bonus.c \
+			ft_lstclear_bonus.c \
+			ft_lstiter_bonus.c \
+			ft_lstmap_bonus.c \
+
+OBJS_BONUS	= $(SRCS_BONUS:%.c=%.o)
+
 FLAGS		= -Wall -Wextra -Werror
 
 $(NAME):
 	gcc $(FLAGS) -c $(SRCS) -I./
-	ar rc $(NAME) $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 
 all: $(NAME)
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(OBJS_BONUS)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+bonus: gcc $(FLAGS) -c $(OBJS) $(OBJS_BONUS) -I./
+		ar rcs $(NAME) $(OBJS) $(OBJS_BONUS)
+		
+.PHONY: all clean fclean re bonus
