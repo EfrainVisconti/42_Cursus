@@ -6,7 +6,7 @@
 /*   By: eviscont <eviscont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 15:04:50 by eviscont          #+#    #+#             */
-/*   Updated: 2023/10/05 16:06:58 by eviscont         ###   ########.fr       */
+/*   Updated: 2023/10/10 15:59:03 by eviscont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ static char	**split_fill(char const *s, char c, char **array)
 char	**ft_split(char const *s, char c)
 {
 	char	**array;
-	
+
 	array = malloc(sizeof(char *) * (count_str(s, c) + 1));
 	if (array == 0)
 		return (0);
@@ -83,11 +83,17 @@ char	**ft_split(char const *s, char c)
 	return (array);
 }
 
-// int	main()
+// int	main(void)
 // {
-// 	char	str[] = "     hey Hola mundo adios    ";
+// 	char	str[] = " hey Hola   adios    ";
 // 	char	c = ' ';
+// 	int		i = 0;
+// 	char	**array = ft_split(str, c);
 
-// 	printf("%d", count_str(str, c));
+// 	while (i < count_str(str, c))
+// 	{
+// 		printf("%s\n", array[i]);
+// 		i++;
+// 	}	
 // 	return (0);
 // }

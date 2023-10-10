@@ -6,12 +6,9 @@
 /*   By: eviscont <eviscont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 17:13:57 by eviscont          #+#    #+#             */
-/*   Updated: 2023/10/05 16:06:36 by eviscont         ###   ########.fr       */
+/*   Updated: 2023/10/10 16:03:05 by eviscont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*Genera una string que represente el valor entero recibido como argumento.
-Los números negativos tienen que gestionarse.*/
 
 #include "libft.h"
 
@@ -65,7 +62,7 @@ char	*ft_itoa(int n)
 // int	main(void)
 // {
 // 	int	s;
-// 	s = -1;
+// 	s = 4564;
 // 	printf("%s", ft_itoa(s));
 // 	return(0);
 // }

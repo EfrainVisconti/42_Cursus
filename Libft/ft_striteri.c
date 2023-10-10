@@ -6,15 +6,11 @@
 /*   By: eviscont <eviscont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 16:55:02 by eviscont          #+#    #+#             */
-/*   Updated: 2023/09/28 18:07:50 by eviscont         ###   ########.fr       */
+/*   Updated: 2023/10/10 16:20:31 by eviscont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*A cada carácter de la string ’s’, aplica la función ’f’ dando como
-parámetros el índice de cada carácter dentro de ’s’ y la dirección del
-propio carácter, que podrá modificarse si es necesario.*/
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
@@ -22,7 +18,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 
 	i = 0;
 	if (s == NULL || f == NULL)
-		return;
+		return ;
 	while (s[i])
 	{
 		f(i, &s[i]);
@@ -40,7 +36,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 // 	}
 // }
 
-// int	main()
+// int	main(void)
 // {
 // 	char	d[] = "Hola Mundo!";
 

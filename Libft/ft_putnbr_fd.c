@@ -6,15 +6,13 @@
 /*   By: eviscont <eviscont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 18:59:26 by eviscont          #+#    #+#             */
-/*   Updated: 2023/09/29 13:59:13 by eviscont         ###   ########.fr       */
+/*   Updated: 2023/10/10 17:04:35 by eviscont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*Envía el número ’n’ al file descriptor dado.*/
-
-int	mag_numb(int n)
+static int	mag_numb(int n)
 {
 	int	i;
 

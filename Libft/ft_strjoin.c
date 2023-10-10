@@ -6,14 +6,11 @@
 /*   By: eviscont <eviscont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 16:17:11 by eviscont          #+#    #+#             */
-/*   Updated: 2023/09/28 11:04:53 by eviscont         ###   ########.fr       */
+/*   Updated: 2023/10/10 15:38:46 by eviscont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*Reserva (con malloc(3)) y devuelve una nueva string, formada por la
-concatenación de ’s1’ y ’s2’.*/
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

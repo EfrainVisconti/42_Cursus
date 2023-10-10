@@ -6,15 +6,11 @@
 /*   By: eviscont <eviscont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 15:45:15 by eviscont          #+#    #+#             */
-/*   Updated: 2023/09/28 16:53:26 by eviscont         ###   ########.fr       */
+/*   Updated: 2023/10/10 16:11:32 by eviscont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*A cada carácter de la string ’s’, aplica la función ’f’ dando como
-parámetros el índice de cada carácter dentro de ’s’ y el propio carácter.
-Genera una nueva string con el resultado del uso sucesivo de ’f’*/
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -35,6 +31,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
+
 // char	fun(unsigned int i, char d)
 // {
 // 	int	n;
@@ -43,12 +40,12 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 // 	return (d - 3);
 // }
 
-// int	main()
+// int	main(void)
 // {
 // 	char	*d;
 
 // 	d = ft_strmapi("Krod#pxqgr", fun);
 // 	printf("%s", d);
 // 	free(d);
-// 	return 0;
+// 	return (0);
 // }

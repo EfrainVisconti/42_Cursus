@@ -6,15 +6,11 @@
 /*   By: eviscont <eviscont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 12:53:07 by eviscont          #+#    #+#             */
-/*   Updated: 2023/09/28 11:03:39 by eviscont         ###   ########.fr       */
+/*   Updated: 2023/10/10 15:42:33 by eviscont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*Elimina todos los caracteres de la string ’set’ desde el principio y
-desde el final de ’s1’, hasta encontrar un caracter no perteneciente a
-’set’. La string resultante se devuelve con una reserva de malloc(3)*/
 
 char	*ft_strtrim(char const *s1, char const *set)
 {

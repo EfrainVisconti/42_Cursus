@@ -6,14 +6,11 @@
 /*   By: eviscont <eviscont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 16:27:52 by eviscont          #+#    #+#             */
-/*   Updated: 2023/10/09 13:17:42 by eviscont         ###   ########.fr       */
+/*   Updated: 2023/10/10 13:41:03 by eviscont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*Se utiliza para convertir una cadena de caracteres que
-representa un número entero en su equivalente en forma de entero.*/
 
 int	ft_atoi(const char *str)
 {
@@ -41,10 +38,9 @@ int	ft_atoi(const char *str)
 	return (num * neg);
 }
 
-// int	main()
+// int	main(void)
 // {
-// 	const char	*s = "   gf575ggfd55";
-
+// 	const char	*s = "---10588";
 // 	int i=atoi(s);
 // 	int	e=ft_atoi(s);
 // 	printf("normal=%d\n",i);

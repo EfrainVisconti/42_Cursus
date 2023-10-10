@@ -6,13 +6,11 @@
 /*   By: eviscont <eviscont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 18:09:30 by eviscont          #+#    #+#             */
-/*   Updated: 2023/09/28 18:47:42 by eviscont         ###   ########.fr       */
+/*   Updated: 2023/10/10 16:21:04 by eviscont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*Envía el carácter ’c’ al file descriptor especificado.*/
 
 void	ft_putchar_fd(char c, int fd)
 {

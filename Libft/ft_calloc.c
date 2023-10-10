@@ -6,16 +6,11 @@
 /*   By: eviscont <eviscont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 19:00:24 by eviscont          #+#    #+#             */
-/*   Updated: 2023/09/23 13:11:26 by eviscont         ###   ########.fr       */
+/*   Updated: 2023/10/10 13:54:29 by eviscont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*Se utiliza para asignar un bloque de memoria contigua y inicializar
-todos sus bytes en cero. Esta función es comúnmente utilizada para
-reservar memoria para arreglos o estructuras de datos en el heap
-(memoria dinámica).*/
 
 void	*ft_calloc(size_t count, size_t size)
 {
@@ -38,7 +33,7 @@ void	*ft_calloc(size_t count, size_t size)
 // 	size_t	i;
 
 // 	i = 0;
-// 	numelem = 10;
+// 	numelem = 2;
 // 	arr = (int *)ft_calloc(numelem, sizeof(int));
 // 	if (arr == 0)
 // 	{
@@ -53,4 +48,3 @@ void	*ft_calloc(size_t count, size_t size)
 // 	free(arr);
 // 	return (0);
 // }
-
