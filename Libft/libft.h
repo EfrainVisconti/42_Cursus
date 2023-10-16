@@ -6,15 +6,13 @@
 /*   By: eviscont <eviscont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 16:20:52 by eviscont          #+#    #+#             */
-/*   Updated: 2023/10/10 17:40:50 by eviscont         ###   ########.fr       */
+/*   Updated: 2023/10/13 12:56:25 by eviscont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
-# include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
 
