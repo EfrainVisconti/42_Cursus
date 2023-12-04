@@ -6,7 +6,7 @@
 /*   By: eviscont <eviscont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 15:54:44 by eviscont          #+#    #+#             */
-/*   Updated: 2023/11/29 16:43:24 by eviscont         ###   ########.fr       */
+/*   Updated: 2023/12/04 16:49:44 by eviscont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,16 @@ size_t	ft_strlen(const char *str)
 	return (i);
 }
 
-char	*ft_strdup(const char *s)
+char	*ft_strdup(char *s)
 {
 	size_t	i;
 	size_t	size;
 	char	*d;
 
 	i = 0;
-	size = ft_strlen((char *)s) + 1;
+	size = ft_strlen(s) + 1;
 	d = (char *)malloc(size);
-	if (d == 0)
+	if (d == NULL)
 		return (free(d), NULL);
 	while (s[i] != '\0')
 	{
@@ -52,33 +52,7 @@ char	*ft_strdup(const char *s)
 	return (d);
 }
 
-// char	*ft_strjoin(char const *s1, char const *s2)
-// {
-// 	char			*res;
-// 	unsigned int	i;
-// 	unsigned int	j;
-
-// 	res = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
-// 	i = 0;
-// 	j = 0;
-// 	if (res == NULL)
-// 		return (0);
-// 	while (i < ft_strlen(s1))
-// 	{
-// 		res[i] = s1[i];
-// 		i++;
-// 	}
-// 	while (s2[j] != '\0')
-// 	{
-// 		res[i] = s2[j];
-// 		i++;
-// 		j++;
-// 	}
-// 	res[i] = '\0';
-// 	return (res);
-// }
-
-void	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+void	ft_strlcpy(char *dst, char *src, size_t dstsize)
 {
 	size_t	i;
 
@@ -90,25 +64,21 @@ void	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	}
 }
 
-char	*ft_strjoin(char *s1, char *s2)
+char	*ft_strjoin(char *s1,char *s2)
 {
 	char	*res;
 	size_t	len1;
 	size_t	len2;
 
 	len1 = ft_strlen(s1);
-	len2 = 0;
-	while (s2[len2] != '\0' && s2[len2] != '\n')
-		len2++;
-	if (s2[len2] == '\n')
-		len2++;
+	len2 = ft_strlen(s2);
 	res = (char *)malloc(len1 + len2 + 1);
 	if (res == NULL)
 		return (free(res), NULL);
 	ft_strlcpy(res, s1, len1);
-	ft_strlcpy(res + len1, s2, len2);
+	ft_strlcpy(res, s2, len2);
 	res[len1 + len2] = '\0';
-	return (res);
+	return (free(s1), res);
 }
 
 char	*ft_strchr(const char *str, int c)
@@ -125,21 +95,21 @@ char	*ft_strchr(const char *str, int c)
 	return (0);
 }
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char *s, size_t start, size_t len)
 {
-	char			*sb;
-	unsigned int	i;
+	char	*sb;
+	size_t	i;
 
 	i = 0;
-	if (s == 0)
-		return (0);
+	if (s == NULL)
+		return (NULL);
 	if (ft_strlen(s) < start)
 		return (ft_strdup(""));
 	if (len > ft_strlen(s) - start)
 		len = ft_strlen(s) - start;
 	sb = (char *)malloc(len + 1);
-	if (sb == 0)
-		return (0);
+	if (sb == NULL)
+		return (free(sb), NULL);
 	while (i < len)
 	{
 		sb[i] = s[start];
@@ -150,17 +120,17 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (sb);
 }
 
-char	*extract_line(char *basin_buffer)
+char	*extract_line(char *line_buffer)
 {
 	int		i;
 	char	*new_line;
 
 	i = 0;
-	while (basin_buffer[i] != '\n' && basin_buffer[i] != '\0')
+	while (line_buffer[i] != '\n' && line_buffer[i] != '\0')
 		i++;
-	if (basin_buffer[i] == 0)
+	if (line_buffer[i] == '\0')
 		return (0);
-	new_line = ft_substr(basin_buffer, 0, i + 1);
+	new_line = ft_substr(line_buffer, 0, i + 1);
 	if (*new_line == 0)
 	{
 		free(new_line);
@@ -169,73 +139,75 @@ char	*extract_line(char *basin_buffer)
 	return (new_line);
 }
 
-char	*obtain_remaining(char *basin_buffer)
+char	*obtain_remaining(char *line_buffer)
 {
 	int		i;
-	char	*rest;
+	char	*res;
 
 	i = 0;
-	while (basin_buffer[i] != '\n' && basin_buffer[i] != '\0')
+	while (line_buffer[i] != '\n' && line_buffer[i] != '\0')
 		i++;
-	if (basin_buffer[i] == 0)
+	if (line_buffer[i] == '\0')
 		return (0);
-	rest = ft_substr(basin_buffer, i + 1, ft_strlen(basin_buffer) - i);
-	if (*rest == 0)
+	res = ft_substr(line_buffer, i + 1, ft_strlen(line_buffer) - i);
+	if (*res == 0)
 	{
-		free(rest);
-		rest = NULL;
+		free(res);
+		res = NULL;
 	}
-	basin_buffer[i + 1] = 0;
-	return (rest);
+	line_buffer[i + 1] = '\0';
+	return (res);
 }
 
-char *append_buffer(char *basin_buffer, char *read_buffer)
+char *append_buffer(char *line_buffer, char *read_buffer)
 {
 	char *temp;
 
-	temp = ft_strjoin(basin_buffer, read_buffer);
-	free(basin_buffer);
+	temp = ft_strjoin(line_buffer, read_buffer);
 	return (temp);
 }
 
-static char	*read_from_file(char *basin_buffer, int fd)
+static char	*read_from_file(char *line_buffer, int fd)
 {
 	int			bytes_read;
-	char		*cup_buffer;
+	char		*buffer;
 
-	cup_buffer = (char *)malloc(BUFFER_SIZE + 1);
-	if (cup_buffer == NULL)
+	buffer = (char *)malloc(BUFFER_SIZE + 1);
+	if (buffer == NULL)
 		return (NULL);
 	bytes_read = 1;
 	while (bytes_read > 0)
 	{
-		bytes_read = read(fd, cup_buffer, BUFFER_SIZE);
+		bytes_read = read(fd, buffer, BUFFER_SIZE);
 		if (bytes_read == -1)
-			return (free(cup_buffer), NULL);
-		cup_buffer[bytes_read] = '\0';
-		basin_buffer = append_buffer(basin_buffer, cup_buffer);
-		if (ft_strchr(basin_buffer, '\n'))
+			return (free(buffer), NULL);
+		buffer[bytes_read] = '\0';
+		line_buffer = append_buffer(line_buffer, buffer);
+		if (ft_strchr(line_buffer, '\n'))
 			break ;
 	}
-	free (cup_buffer);
-	return (basin_buffer);
+	free (buffer);
+	return (line_buffer);
 }
 
 char	*get_next_line(int fd)
 {
-	static char		*basin_buffer;
+	static char		*line_buffer;
 	char			*line;
 
 	if (fd < 0 || read(fd,NULL,0) < 0 || BUFFER_SIZE <= 0)
+	{
+		free(line_buffer);
 		return (NULL);
-	if (!basin_buffer)
-		basin_buffer = (char *)malloc(1);
-	if (!ft_strchr(basin_buffer, '\n'))
-		basin_buffer = read_from_file(basin_buffer, fd);
-	if (!basin_buffer)
-		return (free (basin_buffer), NULL);
-	line = extract_line(basin_buffer);
-	basin_buffer = obtain_remaining(basin_buffer);
+	}
+	if (!line_buffer)
+		line_buffer = (char *)malloc(1);
+	if (line_buffer == NULL)
+		return (free (line_buffer), NULL);
+	if (ft_strchr(line_buffer, '\n') == 0)
+		line_buffer = read_from_file(line_buffer, fd);
+	line = extract_line(line_buffer);
+	line_buffer = obtain_remaining(line_buffer);
 	return (line);
 }
 
@@ -258,7 +230,7 @@ int	main(void)
 		if (line == NULL)
 			break ;
 		count++;
-		printf("[%d]:%s\n", count, line);
+		printf("[%d]:%s", count, line);
 		free(line);
 		line = NULL;
 	}
