@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eviscont <eviscont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/20 11:59:53 by eviscont          #+#    #+#             */
-/*   Updated: 2023/12/07 11:39:09 by eviscont         ###   ########.fr       */
+/*   Created: 2023/11/20 12:01:28 by eviscont          #+#    #+#             */
+/*   Updated: 2023/12/07 12:20:44 by eviscont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 static char	*concat_line(char *line, char *buffer)
 {
@@ -53,53 +53,26 @@ static void	obtain_remaining(char *buffer)
 
 char	*get_next_line(int fd)
 {
-	static char	buffer[BUFFER_SIZE + 1];
+	static char	buffer[4096][BUFFER_SIZE + 1];
 	char		*line;
 	ssize_t		bytes_read;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	line = concat_line(NULL, buffer);
+	line = concat_line(NULL, buffer[fd]);
 	if (line == NULL)
 		return (NULL);
 	while (ft_strchr(line, '\n') == 0)
 	{
-		bytes_read = read(fd, buffer, BUFFER_SIZE);
+		bytes_read = read(fd, buffer[fd], BUFFER_SIZE);
 		if (bytes_read == -1 || (bytes_read == 0 && ft_strlen(line) == 0))
-			return (buffer[0] = '\0', free(line), NULL);
+			return (buffer[fd][0] = '\0', free(line), NULL);
 		if (bytes_read == 0)
 			break ;
-		buffer[bytes_read] = '\0';
-		line = concat_line(line, buffer);
+		buffer[fd][bytes_read] = '\0';
+		line = concat_line(line, buffer[fd]);
 		if (line == NULL)
 			return (NULL);
 	}
-	return (obtain_remaining(buffer), line);
+	return (obtain_remaining(buffer[fd]), line);
 }
-
-// int	main(void)
-// {
-// 	int		fd;
-// 	char	*line;
-// 	int		count;
-
-// 	count = 0;
-// 	fd = open("file.txt", O_RDONLY);
-// 	if (fd == -1)
-// 	{
-// 		printf("Error opening file");
-// 		return (1);
-// 	}
-// 	while (1)
-// 	{
-// 		line = get_next_line(fd);
-// 		if (line == NULL)
-// 			break ;
-// 		count++;
-// 		printf("[%d]:%s", count, line);
-// 		free(line);
-// 		line = NULL;
-// 	}
-// 	close(fd);
-// 	return (0);
-// }
