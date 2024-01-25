@@ -6,7 +6,7 @@
 /*   By: eviscont <eviscont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/29 15:04:50 by eviscont          #+#    #+#             */
-/*   Updated: 2023/10/10 15:59:03 by eviscont         ###   ########.fr       */
+/*   Updated: 2024/01/25 16:36:23 by eviscont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ static char	**split_fill(char const *s, char c, char **array)
 		{
 			free_all(array);
 			return (0);
-		}		
+		}
 		i++;
 	}
 	array[i] = NULL;

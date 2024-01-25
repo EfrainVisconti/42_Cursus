@@ -6,14 +6,14 @@
 /*   By: eviscont <eviscont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 10:56:55 by eviscont          #+#    #+#             */
-/*   Updated: 2023/11/02 17:02:51 by eviscont         ###   ########.fr       */
+/*   Updated: 2024/01/25 16:30:41 by eviscont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
 void	ft_print_to_base(size_t c, char *base, int *length)
-{	
+{
 	size_t	len;
 
 	len = 0;
