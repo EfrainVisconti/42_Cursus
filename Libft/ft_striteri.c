@@ -6,7 +6,7 @@
 /*   By: eviscont <eviscont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 16:55:02 by eviscont          #+#    #+#             */
-/*   Updated: 2023/10/10 16:20:31 by eviscont         ###   ########.fr       */
+/*   Updated: 2024/02/02 13:32:47 by eviscont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,22 +25,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-
-// void	fu(unsigned int i, char *c)
-// {
-// 	i = 0;
-// 	while (c[i])
-// 	{
-// 		c[i] = 'A';
-// 		i++;
-// 	}
-// }
-
-// int	main(void)
-// {
-// 	char	d[] = "Hola Mundo!";
-
-// 	ft_striteri(d, &fu);
-// 	printf("%s", d);
-// 	return (0);
-// }
