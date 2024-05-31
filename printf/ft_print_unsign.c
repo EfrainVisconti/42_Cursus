@@ -6,13 +6,13 @@
 /*   By: eviscont <eviscont@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 10:08:56 by eviscont          #+#    #+#             */
-/*   Updated: 2023/10/31 20:19:46 by eviscont         ###   ########.fr       */
+/*   Updated: 2024/05/31 12:36:30 by eviscont         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_print_unsign(unsigned int c, int *length)
+void	ft_print_unsign(long int c, int *length)
 {
 	if (c < 0)
 	{
